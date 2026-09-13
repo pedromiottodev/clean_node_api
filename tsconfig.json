@@ -6,6 +6,8 @@
         "moduleResolution": "NodeNext",
         "target": "ES2022",
         "esModuleInterop": true,
-        "allowJs": true
-    }
+        "allowJs": true,
+        "types": ["jest", "node"]
+    },
+    "include": ["src/**/*.ts", "jest.config.ts"]
 }
