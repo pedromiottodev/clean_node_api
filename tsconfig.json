@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        //coloque os arquivos JS gerados pela compilação dentro da pasta /dist
+        "outDir": "./dist",
+        "module": "nodenext",
+        "moduleResolution": "NodeNext",
+        "target": "ES2022",
+        "esModuleInterop": true,
+        "allowJs": true
+    }
+}
