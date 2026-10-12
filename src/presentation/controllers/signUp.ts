@@ -1,8 +1,9 @@
-import {IHttpRequest, IHttpResponse} from "../protocols/http.js"
+import { IHttpRequest, IHttpResponse } from "../protocols/http.js"
+import { IController } from "../protocols/controller.js"
 import { MissingParamError } from "../errors/missing-param-error.js"
-import {badRequest} from "../helpers/http-helper.js"
+import { badRequest } from "../helpers/http-helper.js"
 
-export class SignUpController {
+export class SignUpController implements IController {
 
     handle(httpRequest: IHttpRequest): IHttpResponse {
 
