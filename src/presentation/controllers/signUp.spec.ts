@@ -1,8 +1,6 @@
 import { SignUpController } from "./signUp.js"
-import { MissingParamError } from "../errors/missing-param-error.js"
-import { InvalidParamError } from "../errors/invalid-param-error.js"
-import { ServerError } from "../errors/server-error.js"
-import { EmailValidator} from "../protocols/email-validator.js"
+import { MissingParamError, InvalidParamError, ServerError } from "../errors/index.js"
+import { EmailValidator } from "../protocols/email-validator.js"
 import { jest } from "@jest/globals"
 
 

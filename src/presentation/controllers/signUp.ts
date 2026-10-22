@@ -1,7 +1,6 @@
 import { IHttpRequest, IHttpResponse } from "../protocols/http.js"
 import { IController } from "../protocols/controller.js"
-import { MissingParamError } from "../errors/missing-param-error.js"
-import { InvalidParamError } from "../errors/invalid-param-error.js"
+import { MissingParamError, InvalidParamError } from "../errors/index.js"
 import { badRequest, serverError } from "../helpers/http-helper.js"
 import { EmailValidator } from "../protocols/email-validator.js"
 
@@ -38,6 +37,7 @@ export class SignUpController implements IController {
             }
         }
         catch (error) {
-            return serverError()        }
+            return serverError()
+        }
     }
 }
