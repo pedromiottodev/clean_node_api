@@ -2,10 +2,8 @@ import { IHttpRequest, IHttpResponse } from "../protocols/http.js"
 import { IController } from "../protocols/controller.js"
 import { MissingParamError } from "../errors/missing-param-error.js"
 import { InvalidParamError } from "../errors/invalid-param-error.js"
-import { badRequest } from "../helpers/http-helper.js"
+import { badRequest, serverError } from "../helpers/http-helper.js"
 import { EmailValidator } from "../protocols/email-validator.js"
-import { ServerError } from "../errors/server-error.js"
-import { Server } from "node:http"
 
 
 export class SignUpController implements IController {
@@ -40,10 +38,6 @@ export class SignUpController implements IController {
             }
         }
         catch (error) {
-            return {
-                statusCode: 500,
-                body: new ServerError()
-            }
-        }
+            return serverError()        }
     }
 }
