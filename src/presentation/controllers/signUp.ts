@@ -9,6 +9,7 @@ import { EmailValidator} from "../protocols/email-validator.js"
 export class SignUpController implements IController {
     private readonly emailValidator: EmailValidator
 
+    //constructor serve para inicializar a classe com dependências externas
     constructor(emailValidator: EmailValidator) {
         this.emailValidator = emailValidator
     }
