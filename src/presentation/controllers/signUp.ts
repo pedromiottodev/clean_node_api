@@ -14,7 +14,7 @@ export class SignUpController implements IController {
 
         try {
             const requiredFields = ["name", "email", "password", "passwordConfirmation"]
-
+            
             for (const field of requiredFields) {
 
                 if (!httpRequest.body[field]) {
